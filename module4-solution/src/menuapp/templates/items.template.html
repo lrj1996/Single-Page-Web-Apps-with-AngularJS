@@ -1,0 +1,16 @@
+<a ui-sref="home">Home</a> &lt; 
+<a ui-sref="category">Category</a> &lt; 
+<span>{{itemDetails.contents.category.name}}</span>
+<h4>{{itemDetails.contents.category.name}}</h4>
+<p>
+      {{itemDetails.contents.category.special_instructions}}
+</p>
+<ul>
+  <li ng-repeat="item in itemDetails.contents.menu_items">
+    <h5>{{item.name}} : {{item.price_large}}$</h5>
+    <p>
+      {{item.description}}
+    </p>
+  </li>
+</ul>
+
