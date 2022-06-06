@@ -43,7 +43,7 @@
              (!signUpForm.shortName.$pristine || signUpForm.$submitted)">Please enter the menu number.</span>
              <span class="alert-danger" ng-show="signup.showError">Invalid menu number!</span>
             <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
-            class="form-control" placeholder="Short Name"></input>
+            class="form-control" placeholder="Short Name" ng-pattern="^[A-Z][1-9]$"></input>
         </div>
         <div class="form-group col-sm-6">
             <label>Submit:</label>
