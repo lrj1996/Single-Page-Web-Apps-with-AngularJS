@@ -45,7 +45,7 @@
              <span class="alert-danger" ng-show="signUpForm.shortName.$error.pattern && !signUpForm.shortName.$pristine">
              Please enter a valid menu number.</span>
             <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
-            class="form-control" placeholder="Short Name" ng-pattern="/^[A-Z][1-9]$/"></input>
+            class="form-control" placeholder="Short Name" ng-pattern="/^([A-Z]{1,2})([1-9]{1,2})$/"></input>
         </div>
         <div class="form-group col-sm-6">
             <label>Submit:</label>
