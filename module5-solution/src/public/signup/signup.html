@@ -42,7 +42,7 @@
             <span class="alert-danger" ng-show="signUpForm.shortName.$error.required &&
              (!signUpForm.shortName.$pristine || signUpForm.$submitted)">Please enter the menu number.</span>
              <span class="alert-danger" ng-show="signup.showError">The item doesn't existed!</span>
-             <span class="alert-danger" ng-show="signUpForm.shortName.$error">
+             <span class="alert-danger" ng-show="signUpForm.shortName.$error.$valid">
              Please enter a valid menu number.</span>
             <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
             class="form-control" placeholder="Short Name" ng-pattern="^[A-Z][1-9]$"></input>
@@ -52,7 +52,9 @@
             <button type="submit" required
             class="form-control btn btn-primary">Sign in</button>
             <span class="alert-success text-center"
-            ng-show="signup.showMessage">Information has been saved!</span>
+            ng-show="signup.showMessage">Information has been saved! Please see 
+            <a ui-sref="public.myinfo">here</a>
+            </span>
         </div>
     </div>
 </form>
