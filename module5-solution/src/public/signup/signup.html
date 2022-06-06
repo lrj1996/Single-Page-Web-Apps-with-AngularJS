@@ -32,7 +32,7 @@
              (!signUpForm.phone.$pristine || signUpForm.$submitted)">Please enter a phone number.</span>
              <span ng-show="signUpForm.phone.$error.minlength || signUpForm.phone.$error.maxlength"
              class="alert-danger">Please enter a valid phone number.</span>
-            <input type="text" id="phone" name="phone" required ng-model="signup.phone"
+            <input type="number" id="phone" name="phone" required ng-model="signup.phone"
             class="form-control" placeholder="Phone Number" ng-minlength="10" ng-maxlength="10"></input>
         </div>
     </div>
