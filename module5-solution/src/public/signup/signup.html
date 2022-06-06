@@ -41,7 +41,7 @@
             <label for="shortName">Menu Number * (Character+Number, e.g. A1)</label>
             <span class="alert-danger" ng-show="signUpForm.shortName.$error.required &&
              (!signUpForm.shortName.$pristine || signUpForm.$submitted)">Please enter the menu number.</span>
-             <span class="alert-danger" ng-show="signup.showError">The item doesn't existed!</span>
+             <span class="alert-danger" ng-show="signup.showError && !signUpForm.shortName.$pristine">The item doesn't existed!</span>
              <span class="alert-danger" ng-show="signUpForm.shortName.$error.$valid">
              Please enter a valid menu number.</span>
             <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
