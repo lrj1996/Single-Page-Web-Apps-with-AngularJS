@@ -42,7 +42,7 @@
             <span class="alert-danger" ng-show="signUpForm.shortName.$error.required &&
              (!signUpForm.shortName.$pristine || signUpForm.$submitted)">Please enter the menu number.</span>
              <span class="alert-danger" ng-show="signup.showError && !signUpForm.shortName.$pristine">The item doesn't existed!</span>
-             <span class="alert-danger" ng-show="signUpForm.shortName.$error">
+             <span class="alert-danger" ng-show="signUpForm.shortName.$error.pattern && !signUpForm.shortName.$pristine">
              Please enter a valid menu number.</span>
             <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
             class="form-control" placeholder="Short Name" ng-pattern="/^[A-Z][1-9]$/"></input>
